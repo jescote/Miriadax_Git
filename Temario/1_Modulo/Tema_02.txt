@@ -1,0 +1,39 @@
+•git init 
+	•Transforma un directorio en un directorio de trabajo Git
+	•Añadiendo el repositorio de commits al directorio, lo que lo convierte en un directorio de trabajo Git 
+	•Lo añade en el subdirectorio oculto '.git' que contiene la base de datos donde guardar los commits
+
+•Índice o área de cambios (staging area, index) 
+	•Registro de cambios del directorio de trabajo a incluir en el próximo commit 
+	•Los cambios no registrados en el índice no se incluyen al generar un nuevo commit 
+	•Los ficheros no modificados del commit anterior permanecen en el siguiente commit
+
+git add 
+	•registra en el índice los ficheros indicados 
+	•git add . 					registra en el índice todos los ficheros nuevos o modificados
+	•git add LICENSE README.md 	registra los ficheros LICENSE README.md en el índice 
+
+git reset 
+	•extrae <ficheros> del índice  (deshace git add ..) 
+	•git reset . 		extrae del índice todos los ficheros 
+	•git reset LICENSE	extrae LICENSE del índice
+
+git commit
+	•Genera un nuevo commit con lo registrado en el índice 
+	•git commit  -m "Descripción"   guarda nuevo commit con mensaje o título “Descripción"  
+	•git commit 					guarda nuevo commit y abre un editor para crear mensaje del commit 
+	•git commit --amend -m “....”   modifica el último commit con lo registrado en el índice !OJO cambia commit
+									Uno de los casos más comunes en el que quieres deshacer cambios es cuando confirmas demasiado pronto y te olvidas de añadir algún archivo, o te confundes al introducir el mensaje de confirmación.
+	•asigna un identificador único a cada nuevo commit
+	•El identificador actúa como nombre o referencia única del commit  
+	•Ningún otro commit en ningún otro repositorio poseerá el mismo identificador 
+	•Garantiza la integridad del commit: igualdad de identificadores implica igualdad de commits
+
+Identificador de commit 
+	•Número hexadecimal de 40 dígitos generado como clave de hash SHA1 
+	•Ejemplo de identificador:  973751d21c4a71f13a2e729ccf77f3a960885682  
+	•Se suele utilizar el formato corto (formato largo es incómodo) 
+	•7-8 dígitos iniciales (únicos en un proyecto):  973751d2 
+	•Los comandos git permiten identificadores cortos o largos 
+
+git log --oneline  muestra la historia de commits (e ids cortos) de una rama 

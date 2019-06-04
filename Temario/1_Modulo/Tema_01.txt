@@ -1,0 +1,29 @@
+•Documentación:	https://git-scm.com/documentation  
+	•Tutorial:  https://www.atlassian.com/git/tutorials/setting-up-a-repository
+
+•Documentación:	https://git-scm.com/documentation  
+•Tutorial:   	https://www.atlassian.com/git/tutorials/setting-up-a-repository
+
+•Instalación de git o actualización a la última versión 
+	•Instrucciones de GitHub:	https://help.github.com/articles/set-up-git/
+	•Instrucciones git-scm:    	https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+								https://git-scm.com/book/es/v2/Fundamentos-de-Git-Obteniendo-un-repositorio-Git
+	•Tutorial Atlassian:       	https://www.atlassian.com/git/tutorials/install-git
+
+$ git --version	# Indica la versión instalada. Si Git no esta instalado, lo indicará. 
+$ git --help       	# Equivale a git help y muestra lista de los comandos de git mas habituales.
+$ git init --help   # Equivale a git help init, ayuda del comando git init, igual para: add, bisect, .
+
+# El comando git config configura git con las credenciales del desarrollador: 
+$ git config --global user.name "Pedro Ramirez" 
+$ git config --global user.email pramirez@dit.upm.es 
+
+# Consultar el valor de todas las opciones configuradas:
+$ git config --list  
+user.name=Pedro Ramirez 
+user.email=pramirez@dit.upm.es 
+color.ui=true ........ 
+
+# Consultar el valor de una opción: 
+$ git config user.name  
+Pedro Ramirez 
