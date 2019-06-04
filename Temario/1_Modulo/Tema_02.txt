@@ -1,4 +1,4 @@
-•git init 
+git init 
 	•Transforma un directorio en un directorio de trabajo Git
 	•Añadiendo el repositorio de commits al directorio, lo que lo convierte en un directorio de trabajo Git 
 	•Lo añade en el subdirectorio oculto '.git' que contiene la base de datos donde guardar los commits
@@ -29,11 +29,35 @@ git commit
 	•Ningún otro commit en ningún otro repositorio poseerá el mismo identificador 
 	•Garantiza la integridad del commit: igualdad de identificadores implica igualdad de commits
 
-Identificador de commit 
+•Identificador de commit 
 	•Número hexadecimal de 40 dígitos generado como clave de hash SHA1 
 	•Ejemplo de identificador:  973751d21c4a71f13a2e729ccf77f3a960885682  
 	•Se suele utilizar el formato corto (formato largo es incómodo) 
 	•7-8 dígitos iniciales (únicos en un proyecto):  973751d2 
 	•Los comandos git permiten identificadores cortos o largos 
 
+•Un commit se genera por modificación del commit anterior 
+	•Añadiendo, eliminado o modificando ficheros del directorio de trabajo (y de sus subdir.) 
+	•Git controla los cambios en los ficheros respecto al commit anterior
+
 git log --oneline  muestra la historia de commits (e ids cortos) de una rama 
+
+git status
+	•muestra estado de los ficheros del directorio:  
+		•modified:	modificados respecto al commit anterior 
+		•untracked:	no existentes en el commit anterior 
+		•staged:	registrados para el próximo commit 
+	•git status -s: Muestra estado en formato compacto muy cómodo y conciso
+
+git diff 
+	•Mostrar diferencias en los ficheros modified respecto al commit anterior 
+		•git diff: 				muestra los cambios en todos los ficheros modified del directorio de trabajo 
+		•git diff README.md:	muestra solo los cambios en README.md, pero solo si es modified
+
+	•Mostrar diferencias en los ficheros staged respecto al commit anterior 
+		•git diff --cached: 			muestra los cambios en todos los ficheros staged del directorio de trabajo 
+		•git diff --cached  README.md:	muestra solo los cambios en README.md, pero solo si es staged 
+
+	•git diff nuestra las diferencias en las líneas del código: 
+		•Líneas añadidas: 	en verde y comienzan por + 
+		•Líneas eliminadas:	en rojo y comienzan por -
